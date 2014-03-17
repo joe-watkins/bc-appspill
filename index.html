@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bc-AppSpill.js - Output over 500 web app items to a page</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css">
+	<style>
+		p {font-size:1.3em;}
+		.bc-output-all {display:none;}
+		.bc-output-all .pagination.webapp { display:none; }
+		.meow {padding:5px; border:1px solid #ddd;}
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<h1>bc-AppSpill.js Output over 500+ BC Web App items</h1>
+		<p>BC limits how many web app items to a page at a time. We will iterate through BC's pagination and use jQuery to load them into the content area. From there we can do what ever we want with the content... even run a callback function if we like.</p>
+
+		<div class="bc-output-all ajax-target">
+				{module_webapps,APPIDHERE,a}
+		</div>
+
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="javascript/bc-appspill.min.js"></script>
+
+	<script type="text/javascript">
+		$('.bc-output-all').bcAppSpill(); 
+	</script>
+
+</body>
+</html>
