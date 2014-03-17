@@ -35,41 +35,37 @@ Include jQuery 1.10+ &amp; bc-appspill.min.js
 ### With a callback function
 This is handy for when you want a bunch of items on a page and then you want to use another plugin to manipulate that data eg. jQuery driven calendar feature.
 
-```html
- <script>
+```javascript
 
- 	// example callback function
- 	// adds a class of 'meow' to all the items
- 	// after they have all loaded
- 	function _manipulateItems(target){
-		$(target).find('div').each(function(){
-			$(this).addClass('meow');
-		}); 
-	}
+// example callback function
+// adds a class of 'meow' to all the items
+// after they have all loaded
+ function _manipulateItems(target){
+  $(target).find('div').each(function(){
+	 $(this).addClass('meow');
+  }); 
+ }
 
-	$('.bc-output-all').bcAppSpill({
-		callBack: function(){
-			_manipulateItems('.bc-output-all'); // run this function after
-		}
-	});
+ $('.bc-output-all').bcAppSpill({
+  callBack: function(){
+	 _manipulateItems('.bc-output-all'); // run this function after
+  }
+ });
 
- </script>
 ```
 
 ### Options
 Below you will find some simple options to define:
 
-```html
-	<script>
-	  $('.bc-output-all').bcAppSpill({
-			ajaxTarget: 'ajax-target', // a handle for ajax
-      bcPagClass: 'pagination.webapp', // BC's default pagination <ul>
-      bcPaginationNext: 'li.pag-next', // BC's default pagination next link 
-			callBack: function(){
-									_manipulateItems('.bc-output-all'); // run this function afterwards
-								}
-		});
-	</script>
+```javascript
+$('.bc-output-all').bcAppSpill({
+  ajaxTarget: 'ajax-target', // a handle for ajax
+  bcPagClass: 'pagination.webapp', // BC's default pagination <ul>
+  bcPaginationNext: 'li.pag-next', // BC's default pagination next link 
+  callBack: function(){
+   _manipulateItems('.bc-output-all'); // run this function afterwards
+ }
+});
 ```
 
 ### Bonus Material
