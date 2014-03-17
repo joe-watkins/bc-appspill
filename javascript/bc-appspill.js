@@ -34,7 +34,7 @@
 							// no pagination with callback
 							if(paginationCount === 0 && o.callBack != null){
 								$.when( grabData() ).then(function(){
-									executeCallback(o.callBack);
+									//executeCallback(o.callBack);
 									$parent.show();
 								});
 							}
