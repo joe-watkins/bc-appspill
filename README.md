@@ -1,5 +1,5 @@
 # Introducing bc-AppSpill.js
-A jQuery plugin for outputting more than 500 web app items to a page at once within Adobe Business Catalyst. You can even run a callback function after that if you'd like to manipulate this data.
+A jQuery plugin for outputting more than 500 web app items to a page at once within Adobe Business Catalyst. Wanna run a callback function on all of the web app items once you have them?.. welp you are in luck! You can :)
 
 The way this works is the plugin looks for BC's pagination which starts after 500 web app items and grabs content from all those pages with Ajax. The plugin will then output all those items to the page and show the target container. 
 
