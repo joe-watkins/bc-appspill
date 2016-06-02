@@ -1,3 +1,5 @@
+** This project is unmaintained. I doubt it still works! :)
+
 # Introducing bc-AppSpill.js
 A jQuery plugin for outputting more than 500 web app items to a page at once within Adobe Business Catalyst.
 
